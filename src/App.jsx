@@ -3,11 +3,18 @@ import Header from './assets/components/Header'
 import JournarEntry  from './assets/components/JournarEntry'
 import mountFuji from '/src/assets/images/Mount_Fuji.jpg'
 import mapIcon from '/src/assets/images/location_icon.svg'
+import globeIcon from '/src/assets/images/globe_image.svg'
 
 const App = () => {
   return (
     <>
-      <Header />
+      <Header 
+        globeIcon = {{
+          src: globeIcon,
+          alt: "globe icon"
+        }}
+        generalText = "My Travel Journal"
+      />
       <JournarEntry 
         mountFuji = {{
           src: mountFuji,
