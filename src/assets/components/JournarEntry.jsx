@@ -9,7 +9,7 @@ const JournarEntry = (props) => {
         <div> 
             <div className = 'flex'>
                 <img src = {props.mapIcon.src} alt = {props.mapIcon.alt} />
-                <span className = 'font-medium'>JAPAN</span>
+                <span className = 'font-medium'>{props.countryName}</span>
                 <a className = 'ml-3 text-gray-600 underline' target = {props.mapLink.target} href = {props.mapLink.href} >{props.mapLink.text}</a>
             </div>
             <h2 className = 'font-bold my-2 text-2xl'>{props.mountName}</h2>
