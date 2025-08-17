@@ -20,6 +20,7 @@ const App = () => {
           src: mountFuji,
           alt: "mount fuji"
         }}
+        countryName = "JAPAN"
         mapIcon = {{
           src: mapIcon,
           alt: "map marker icon"
