@@ -1,12 +1,35 @@
-# React + Vite
+# My Travel Journal (React Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that displays a personal travel journal.  
+Each entry shows the country, title, dates, description, and a link to Google Maps, along with a location image.  
 
-Currently, two official plugins are available:
+The project demonstrates React components, props, mapping through data arrays, and styling with TailwindCSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Reusable React Components  
+  - A Header component for the app title.  
+  - A JournarEntry component for each travel entry.  
+  - Components are reusable, making the code clean and modular.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Dynamic Rendering with map()  
+  - Travel entries are stored in data.js as an array of objects.  
+  - The App component maps through the data and generates a list of JournarEntry components dynamically.
+
+- TailwindCSS Styling  
+  - TailwindCSS is used for utility-first styling.  
+  - Classes like flex, w-2/5, gap-6, rounded-md, and text-gray-600 create a clean and responsive design.
+
+- External Links  
+  - Each entry includes a link to Google Maps for the location.  
+  - Opens in a new tab (target="_blank").
+
+## Technologies Used
+
+- React – Component-based UI library for building the interface.  
+- JavaScript (ES6+) – Logic and JSX syntax for React.  
+- TailwindCSS – Utility-first CSS framework for styling.  
+- Vite – Fast development build tool (if used in your setup).  
+
+## Project Structure
+[Live Demo](https://traveljournalbycg.netlify.app/)
