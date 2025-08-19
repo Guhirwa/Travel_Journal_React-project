@@ -1,39 +1,26 @@
-import React from 'react'
 import Header from './assets/components/Header'
 import JournarEntry  from './assets/components/JournarEntry'
-import mountFuji from '/src/assets/images/Mount_Fuji.jpg'
-import mapIcon from '/src/assets/images/location_icon.svg'
-import globeIcon from '/src/assets/images/globe_image.svg'
+import data from '/src/data.js'
 
 const App = () => {
+
+  const entryElements = data.map((entry) => {
+    return (
+      <JournarEntry 
+        img = {entry.img}
+        title = {entry.title}
+        country = {entry.country}
+        googleMapsLink = {entry.googleMapsLinks}
+        dates = {entry.dates}
+        text = {entry.text}
+      />
+    )
+  })
+ 
   return (
     <>
-      <Header 
-        globeIcon = {{
-          src: globeIcon,
-          alt: "globe icon"
-        }}
-        generalText = "My Travel Journal"
-      />
-      <JournarEntry 
-        mountFuji = {{
-          src: mountFuji,
-          alt: "mount fuji"
-        }}
-        countryName = "JAPAN"
-        mapIcon = {{
-          src: mapIcon,
-          alt: "map marker icon"
-        }}
-        mapLink = {{
-          target:"_blank",
-          href: "https://maps.app.goo.gl/FJpfbrPHGJ4aZNxN8",
-          text: "View on Google Map"
-        }}
-        mountName = "Mount Fuji"
-        date = "12 Jan, 2025 - 24 Sept 2025"
-        generalText = " Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet) Mount Fuji is the single most poular tourist site in Japan, for both Japanese and foreign tourists."
-      />
+      <Header />
+      {entryElements}
     </>
   )
 }
